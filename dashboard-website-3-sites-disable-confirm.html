@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboards-Websites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+<header>
+
+  <div class="header-inner header-full">
+
+    <div class="hamburger dash-hamburger hamburger--3dy">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+
+    <div class="left">
+      <div class="logo-block">
+        <a href="#0"><img src="img/Polygraph-logo.svg" alt="site logo"></a>
+      </div>
+    </div>
+
+    <div class="relative-block">
+      <div class="right">
+        <div class="login-user">
+          <div id="account-menu">
+            <img src="img/user.svg" alt="user icon" class="user-icon">
+            <span>Artyom Yarmashuk</span>
+            <img src="./img/chevron_left.svg" class="chevron-down" alt="icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="account-menu-popup hide-element" id="account-menu-popup">
+        <ul>
+          <li><a href="settings-acc.html">Settings</a></li>
+          <li><a href="sign-in.html">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="user-mob">
+      <div class="login-user">
+        <a href="#0"><img src="img/user.svg" alt="user icon" class="user-icon">
+          <img src="./img/chevron_left.svg" class="chevron-down" alt="icon"></a>
+      </div>
+    </div>
+
+  </div>
+
+</header>
+<div class="dash-overflow"></div>
+<div class="modal">
+  <div class="modal-content">
+
+    <div class="modal-close-button">
+      <a href="dashboard-website-3-sites.html">
+        <img src="./img/sign/close.svg" width="18" alt="">
+      </a>
+    </div>
+
+    <div class="modal-text">
+      To confirm you wish to disable this website and all its corresponding data, type "Yes" in the box below and click
+      "Disable"
+    </div>
+
+    <form action="">
+      <div class="form-group">
+        <label class="raz">
+          <input type="text" placeholder="&nbsp;" id="submit-input">
+          <span>Decision</span>
+        </label>
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit-button" class="management-button disabled-button" disabled>Disable</button>
+        <a href="dashboard-website-3-sites.html" class="management-button">Cancel</a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+
+<div class="dashboard">
+
+  <div class="dash-sidebar-menu" id="dash-navigation">
+
+    <div class="dash-nav">
+
+      <div class="websites">
+        <h2>Websites</h2>
+        <div class="add-website">
+          <a href="#" class="add-web"><img src="./img/dashboard/add_active.svg" alt="">Add site</a>
+        </div>
+        <ul class="website-list">
+          <li>niwart.io</li>
+          <li>zapusk.io</li>
+        </ul>
+      </div>
+
+      <div class="disabled">
+        <h2>Disabled</h2>
+        <ul class="disabled-list">
+          <li>facebook.com</li>
+        </ul>
+
+      </div>
+
+      <div class="pending">
+        <h2>Pending</h2>
+        <ul class="pending-list">
+          <li>google.com</li>
+        </ul>
+
+      </div>
+
+      <div class="profile-nav-menu nav-menu">
+        <ul>
+          <li class="active"><a href=""><img src="img/dashboard/Site_active.svg" alt="icon">Websites</a></li>
+          <li><a href=""><img src="img/dashboard/settings_icon_menu.svg" alt="icon">Settings</a></li>
+          <li><a href=""><img src="img/dashboard/logout_icon_menu.svg" alt="icon">Log out</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="dash-content">
+
+    <div class="dash-inner-content">
+
+      <div class="web-list-block">
+        <h1>Websites</h1>
+        <a href="dashboard-website-add-site.html" class="add-site-btn"><img src="./img/dashboard/add_white.svg" alt="">Add
+          Site</a>
+        <div class="overflow-x-auto">
+        <div class="web-table">
+
+          <div class="heading">
+            <div class="lable-site">Site</div>
+            <div class="label-status">Status</div>
+            <div class="lable-disable">Disable</div>
+            <div class="label-delete">Delete</div>
+            <div class="label-settings">Settings</div>
+          </div>
+
+          <div class="table-body">
+
+            <div class="b-site">niwart.io</div>
+            <div class="b-status status-active"><span>Active</span></div>
+            <div class="b-disable">
+              <input class="checkbox" id="checkbox1" type="checkbox" checked>
+              <label class="toggle toggle-approved-site" for="checkbox1">
+                <span class="disc disc-approved-site"></span>
+              </label>
+            </div>
+            <div class="b-delete"><a href=""><img src="./img/dashboard/delete.svg" alt=""></a></div>
+            <div class="b-settings"><a href="dashboard-website-settings.html"><img
+              src="./img/dashboard/settings_icon_menu.svg" alt=""></a></div>
+
+          </div>
+
+          <div class="table-body">
+
+            <div class="b-site">zapusk.io</div>
+            <div class="b-status status-disabled"><span>Disabled</span></div>
+            <div class="b-disable">
+              <input class="checkbox" id="checkbox2" type="checkbox">
+              <label class="toggle toggle-approved-site" for="checkbox2">
+                <span class="disc disc-approved-site"></span>
+              </label>
+            </div>
+            <div class="b-delete"><a href=""><img src="./img/dashboard/delete.svg" alt=""></a></div>
+            <div class="b-settings"><a href=""><img src="./img/dashboard/settings_icon_menu.svg" alt=""></a></div>
+
+          </div>
+
+          <div class="table-body">
+
+            <div class="b-site">google.com</div>
+            <div class="b-status status-pending"><span>Pending</span></div>
+            <div class="b-disable">
+              <input class="checkbox" id="checkbox3" type="checkbox" disabled>
+              <label class="toggle" for="checkbox3">
+                <span class="disc"></span>
+              </label>
+            </div>
+            <div class="b-delete"><a href=""><img src="./img/dashboard/delete.svg" alt=""></a></div>
+            <div class="b-settings"><a href=""><img src="./img/dashboard/settings_icon_menu.svg" alt=""></a></div>
+
+          </div>
+
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-top">
+      <div class="footer-logo-block">
+        <div class="footer-logo">
+          <a href="#0"><img src="img/Polygraph-logo.svg" alt="site logo"></a>
+        </div>
+      </div>
+      <div class="footer-menus">
+        <div id="company" class="footer-menu">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div id="articles" class="footer-menu">
+          <h3>Articles</h3>
+          <ul>
+            <li><a href="">What is X?</a></li>
+            <li><a href="">Some article about Y</a></li>
+            <li><a href="">More articles</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="copy">
+        All rights reserved ©Polygraph 2021
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+<script src="js/main.js"></script>
+
+<script>
+  const submitInput = document.getElementById("submit-input");
+  const submitButton = document.getElementById("submit-button");
+  const disabledAttr = document.createAttribute("disabled");
+
+  if (null !== submitInput && null !== submitButton) {
+
+    submitInput.addEventListener("input", function () {
+      if (
+        "Yes" === submitInput.value &&
+        submitButton.classList.contains("disabled-button") &&
+        submitButton.attributes.hasOwnProperty("disabled")
+      ) {
+        submitButton.classList.remove("disabled-button");
+        submitButton.attributes.removeNamedItem("disabled");
+      } else {
+        submitButton.classList.add("disabled-button");
+        submitButton.attributes.setNamedItem(disabledAttr);
+      }
+    });
+
+  }
+</script>
+
+</body>
+</html>

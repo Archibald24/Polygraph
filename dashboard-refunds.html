@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Refunds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+<header>
+
+  <div class="header-inner header-full">
+
+    <div class="hamburger dash-hamburger hamburger--3dy">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+
+    <div class="left">
+      <div class="logo-block">
+        <a href="#0"><img src="img/Polygraph-logo.svg" alt="site logo"></a>
+      </div>
+    </div>
+
+    <div class="relative-block">
+      <div class="right">
+        <div class="login-user">
+          <div id="account-menu">
+            <img src="img/user.svg" alt="user icon" class="user-icon">
+            <span>Artyom Yarmashuk</span>
+            <img src="./img/chevron_left.svg" class="chevron-down" alt="icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="account-menu-popup hide-element" id="account-menu-popup">
+        <ul>
+          <li><a href="settings-acc.html">Settings</a></li>
+          <li><a href="sign-in.html">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="user-mob">
+      <div class="login-user">
+        <a href="#0"><img src="img/user.svg" alt="user icon" class="user-icon">
+          <img src="./img/chevron_left.svg" class="chevron-down" alt="icon"></a>
+      </div>
+    </div>
+
+  </div>
+
+</header>
+
+<div class="dash-overflow"></div>
+
+<div class="dashboard">
+
+  <div class="dash-sidebar-menu" id="dash-navigation">
+
+    <div class="dash-nav">
+
+      <div class="websites">
+        <h2>Websites</h2>
+        <div class="add-website">
+          <a href="dashboard-website-add-site.html" class="add-web"><img src="./img/dashboard/add_active.svg" alt="">Add
+            site</a>
+        </div>
+        <ul class="website-list">
+          <li class="active">niwart.io</li>
+          <li>zapusk.io</li>
+        </ul>
+      </div>
+
+      <div class="disabled">
+        <h2>Disabled</h2>
+        <ul class="disabled-list">
+          <li>facebook.com</li>
+        </ul>
+
+      </div>
+
+      <div class="pending">
+        <h2>Pending</h2>
+        <ul class="pending-list">
+          <li>google.com</li>
+        </ul>
+
+      </div>
+
+
+      <div class="profile-nav-menu nav-menu">
+        <ul>
+          <li><a href=""><img src="img/dashboard/Site_white.svg" alt="icon">Websites</a></li>
+          <li><a href=""><img src="img/dashboard/settings_icon_menu.svg" alt="icon">Settings</a></li>
+          <li><a href=""><img src="img/dashboard/logout_icon_menu.svg" alt="icon">Log out</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="dash-reports">
+
+      <h2>Reports</h2>
+
+      <div class="main-reports-menu reports-menu">
+        <ul>
+          <li><a href="dashboard-keywords.html"><img src="img/dashboard/key_icon_menu_light.svg" alt="icon">Keywords</a>
+          </li>
+          <li><a href="dashboard-sources.html"><img src="img/dashboard/sources_icon_menu.svg" alt="icon">Sources</a>
+          </li>
+          <li class="active"><a href=""><img src="img/dashboard/refunds_icon_menu_dark.svg" alt="icon">Refunds</a></li>
+          <li><a href=""><img src="img/dashboard/google_icon_menu.svg" alt="icon">Google</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="dash-content">
+
+    <h1 class="ttl">Refunds</h1>
+    <div class="sub">How to use this report for refunds</div>
+    <div class="desc">The table below contains the details of every fraudulent click the website has received. <br>
+      You can use this data to request refunds from the ad platforms you are using
+    </div>
+
+    <div class="dash-inner-content">
+
+      <div class="overflow-x-auto">
+
+        <div class="desc flex-center white-text m-width-1070">
+          <!--      TODO: Need to add dropdown menu!-->
+
+          <div class="flex-center">
+            <div>Campaigns:</div>
+            <div class="filter-dropdown-menu">
+              <a href="#">
+                <span>All</span>
+                <img src="./img/chevron_left.svg" class="chevron-down" alt="icon">
+              </a>
+            </div>
+          </div>
+
+          <div class="flex-center">
+            <div>Sources:</div>
+            <div class="filter-dropdown-menu">
+              <a href="#">
+                <span>All</span>
+                <img src="./img/chevron_left.svg" class="chevron-down" alt="icon">
+              </a>
+            </div>
+          </div>
+
+          <div class="period-selection">
+            <ul>
+              <li class="active">This month</li>
+              <li><a>October</a></li>
+              <li><a>September</a></li>
+              <li><a>August</a></li>
+              <li><a>July</a></li>
+              <li><a>June</a></li>
+              <li><a>Past 6 months</a></li>
+            </ul>
+          </div>
+
+          <a href="#" class="download-csv-btn">
+            <img src="./img/dashboard/receive-square.svg" alt="">
+            <div class="margin-left-8">Download CSV</div>
+          </a>
+        </div>
+
+        <div class="refunds-table m-width-1070">
+
+          <div class="heading">
+            <div class="label-six-columns">DateTime</div>
+            <div class="label-six-columns">IP Address</div>
+            <div class="label-six-columns">Source</div>
+            <div class="label-six-columns">Campaign</div>
+            <div class="label-six-columns">Keyword</div>
+            <div class="label-six-columns">Reason</div>
+          </div>
+
+          <div class="table-body">
+            <div class="b-six-columns">2021-05-07 08:10:10</div>
+            <div class="b-six-columns">123.456.789.123</div>
+            <div class="b-six-columns">Google</div>
+            <div class="b-six-columns">fb001</div>
+            <div class="b-six-columns">Text</div>
+            <div class="b-six-columns">Text</div>
+          </div>
+
+          <div class="table-body">
+            <div class="b-six-columns">2021-05-07 08:10:10</div>
+            <div class="b-six-columns">123.456.789.123</div>
+            <div class="b-six-columns">Google</div>
+            <div class="b-six-columns">fb001</div>
+            <div class="b-six-columns">Text</div>
+            <div class="b-six-columns">Text</div>
+          </div>
+
+          <div class="table-body">
+            <div class="b-six-columns">2021-05-07 08:10:10</div>
+            <div class="b-six-columns">123.456.789.123</div>
+            <div class="b-six-columns">Google</div>
+            <div class="b-six-columns">fb001</div>
+            <div class="b-six-columns">Text</div>
+            <div class="b-six-columns">Text</div>
+          </div>
+
+          <div class="table-body">
+            <div class="b-six-columns">2021-05-07 08:10:10</div>
+            <div class="b-six-columns">123.456.789.123</div>
+            <div class="b-six-columns">Google</div>
+            <div class="b-six-columns">fb001</div>
+            <div class="b-six-columns">Text</div>
+            <div class="b-six-columns">Text</div>
+          </div>
+
+          <div class="table-body">
+            <div class="b-six-columns">2021-05-07 08:10:10</div>
+            <div class="b-six-columns">123.456.789.123</div>
+            <div class="b-six-columns">Google</div>
+            <div class="b-six-columns">fb001</div>
+            <div class="b-six-columns">Text</div>
+            <div class="b-six-columns">Text</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="dash-reports-mob">
+    <div class="main-reports-menu reports-menu">
+      <ul>
+        <li>
+          <a href="dashboard-website-3-sites.html">
+            <div>
+              <img src="img/dashboard/web_icon_menu.svg" alt="icon">
+            </div>
+            <div>
+              Websites
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="dashboard-keywords.html">
+            <div>
+              <img src="img/dashboard/key_icon_menu_light.svg" alt="icon">
+            </div>
+            <div>
+              Keywords
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="dashboard-sources.html">
+            <div>
+              <img src="img/dashboard/sources_icon_menu.svg" alt="icon">
+            </div>
+            <div>
+              Sources
+            </div>
+          </a>
+        </li>
+        <li class="active">
+          <a href="">
+            <div>
+              <img src="img/dashboard/refunds_icon_menu_dark.svg" alt="icon">
+            </div>
+            <div>
+              Refunds
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <img src="img/dashboard/google_icon_menu.svg" alt="icon">
+            </div>
+            <div>
+              Google
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-top">
+      <div class="footer-logo-block">
+        <div class="footer-logo">
+          <a href="#0"><img src="img/Polygraph-logo.svg" alt="site logo"></a>
+        </div>
+      </div>
+      <div class="footer-menus">
+        <div id="company" class="footer-menu">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div id="articles" class="footer-menu">
+          <h3>Articles</h3>
+          <ul>
+            <li><a href="">What is X?</a></li>
+            <li><a href="">Some article about Y</a></li>
+            <li><a href="">More articles</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="copy">
+        All rights reserved ©Polygraph 2021
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

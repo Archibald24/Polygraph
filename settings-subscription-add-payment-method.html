@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subscription Settings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+<header>
+
+  <div class="header-inner header-full">
+
+    <div class="hamburger dash-hamburger hamburger--3dy">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+
+    <div class="left">
+      <div class="logo-block">
+        <a href="#0"><img src="img/Polygraph-logo.svg" alt="site logo"></a>
+      </div>
+    </div>
+
+    <div class="relative-block">
+      <div class="right">
+        <div class="login-user">
+          <div id="account-menu">
+            <img src="img/user.svg" alt="user icon" class="user-icon">
+            <span>Artyom Yarmashuk</span>
+            <img src="./img/chevron_left.svg" class="chevron-down" alt="icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="account-menu-popup hide-element" id="account-menu-popup">
+        <ul>
+          <li><a href="settings-acc.html">Settings</a></li>
+          <li><a href="sign-in.html">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="user-mob">
+      <div class="login-user">
+        <a href="#0"><img src="img/user.svg" alt="user icon" class="user-icon">
+          <img src="./img/chevron_left.svg" class="chevron-down" alt="icon"></a>
+      </div>
+    </div>
+
+  </div>
+
+</header>
+<div class="dash-overflow"></div>
+
+<div class="dashboard">
+
+  <div class="dash-sidebar-menu" id="dash-navigation">
+
+    <div class="dash-nav">
+
+      <div class="websites">
+        <h2>Websites</h2>
+        <div class="add-website">
+          <a href="dashboard-website-add-site.html" class="add-web"><img src="./img/dashboard/add_active.svg" alt="">
+            Add site
+          </a>
+        </div>
+        <ul class="website-list">
+          <li>niwart.io</li>
+          <li>zapusk.io</li>
+        </ul>
+      </div>
+
+      <div class="disabled">
+        <h2>Disabled</h2>
+        <ul class="disabled-list">
+          <li>facebook.com</li>
+        </ul>
+
+      </div>
+
+      <div class="pending">
+        <h2>Pending</h2>
+        <ul class="pending-list">
+          <li>google.com</li>
+        </ul>
+
+      </div>
+
+
+      <div class="profile-nav-menu nav-menu">
+        <ul>
+          <li><a href=""><img src="img/dashboard/Site_white.svg" alt="icon">Websites</a></li>
+          <li class="active"><a href=""><img src="img/dashboard/settings_icon_menu_dark.svg" alt="icon">Settings</a>
+          </li>
+          <li><a href=""><img src="img/dashboard/logout_icon_menu.svg" alt="icon">Log out</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="dash-content">
+
+    <h1 class="ttl">Settings</h1>
+
+    <div class="navigation-block">
+      <div>
+        <a href="">Account</a>
+      </div>
+      <div class="active">
+        <a href="">Subscription</a>
+      </div>
+    </div>
+
+    <div>
+      <ul class="breadcrumb">
+        <li><a href="">Subscription</a></li>
+        <li>Payment Method</li>
+      </ul>
+    </div>
+
+    <div class="dash-inner-content">
+
+      <h1 class="ttl">Add a Payment Method</h1>
+
+      <div class="settings-block-details white-text mb-8">
+        Payment card details
+      </div>
+
+      <div class="settings-block mb-16">
+        <div class="settings-block-inner">
+
+          <form action="" class="settings-block-form">
+
+            <div class="settings-form-group payment-card-details">
+
+              <div class="settings-form-column flex-start m-width-200">
+                <img src="img/dashboard/settings/subscription/new-credit-card.svg" width="25" alt="card"
+                     class="margin-right-8">
+                <div class="margin-both-8 width-100-percent">
+                  <input type="text" name="card-number" id="card-number" placeholder="Card number"
+                         class="input-card-details">
+                </div>
+              </div>
+
+              <div class="settings-form-column flex-end">
+                <div class="margin-right-16 width-20-percent m-width-50">
+                  <input type="text" name="due-date" id="due-date" placeholder="MM/YY" class="input-card-details">
+                </div>
+                <div class="width-20-percent m-width-50">
+                  <input type="password" name="cvc" id="cvc" placeholder="CVC" class="input-card-details">
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+      <div class="checkbox-block">
+        <input type="checkbox" id="use-default-checkbox" name="use-default-checkbox" class="checkbox">
+        <label for="use-default-checkbox" class="checkbox-label ">Use as default payment method</label>
+      </div>
+
+      <div class="add-payment mb-16">
+        <a href="" class="add-new disabled-button">
+          <div class="text-field">
+            Add
+          </div>
+        </a>
+      </div>
+
+      <div class="add-payment">
+        <a href="" class="add-new solid cancel">
+          <div class="text-field">
+            <img src="./img/arrow-circle-left.svg" alt="">
+            Back
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-top">
+      <div class="footer-logo-block">
+        <div class="footer-logo">
+          <a href="#0"><img src="img/Polygraph-logo.svg" alt="site logo"></a>
+        </div>
+      </div>
+      <div class="footer-menus">
+        <div id="company" class="footer-menu">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div id="articles" class="footer-menu">
+          <h3>Articles</h3>
+          <ul>
+            <li><a href="">What is X?</a></li>
+            <li><a href="">Some article about Y</a></li>
+            <li><a href="">More articles</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="copy">
+        All rights reserved ©Polygraph 2021
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+<script src="js/main.js"></script>
+
+<script src="https://unpkg.com/imask"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const inputCardNumber = document.getElementById("card-number");
+    const inputDueDate = document.getElementById("due-date");
+    const inputCvc = document.getElementById("cvc");
+
+    const CardNumberMaskOptions = {
+      mask: '0000 0000 0000 0000',
+    };
+    const DueDateMaskOptions = {
+      mask: '00/00',
+    };
+    const CvcMaskOptions = {
+      mask: '000',
+    };
+
+    IMask(inputCardNumber, CardNumberMaskOptions);
+    IMask(inputDueDate, DueDateMaskOptions);
+    IMask(inputCvc, CvcMaskOptions);
+
+  })
+</script>
+
+</body>
+</html>
