@@ -420,7 +420,6 @@ header{
   justify-content: space-between;
   /*background: #000A1F;*/
   background: inherit;
-  box-shadow: inset 0px -1px 0px #161F32;
 }
 
 .header-inner .left .logo-block{
@@ -1602,6 +1601,7 @@ header{
 /*Dashboards*/
 .header-full{
   max-width: 100%;
+  box-shadow: inset 0px -1px 0px #161F32;
 }
 
 .dashboard{
