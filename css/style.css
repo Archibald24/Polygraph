@@ -1291,7 +1291,7 @@ header{
 }
 
 .pagination a:hover{
-  background-color: #03ADEE;
+  border: 1px solid #6C737F;
   transition: all .3s ease-in-out;
 }
 
@@ -1685,7 +1685,7 @@ header{
   align-items: center;
   border-radius: 6px;
   margin: 8px;
-  padding: 9px 8px;
+  padding: 9px 4px;
 }
 
 .dash-reports .reports-menu ul li a{
@@ -1695,7 +1695,7 @@ header{
 .dash-reports .reports-menu ul li.active{
   color: #030015;
   background-color: #03ADEE;
-  padding: 9px 8px;
+  padding: 9px 4px;
 }
 
 .tracking-sites{
@@ -1717,10 +1717,12 @@ header{
   text-transform: uppercase;
 }
 
-.website-list,
+.website-list{
+  margin-top: 12px;
+}
 .pending-list,
 .disabled-list{
-  margin: 16px 0px;
+  margin: 0px 0px;
 }
 
 .website-list li,
@@ -1843,7 +1845,7 @@ header{
 .dash-content .ttl{
   font-size: 24px;
   line-height: 32px;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
   font-weight: 800;
   color: #fff;
 }
@@ -2179,8 +2181,8 @@ ul.breadcrumb li a {
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-top: 36px;
+  flex-wrap: nowrap;
+  /*padding-top: 36px;*/
 }
 
 .dash-inner-content .card-list .card{
@@ -2323,7 +2325,7 @@ ul.breadcrumb li a {
   border: 1px dashed #AC2F2F;
   border-radius: 12px;
   max-width: 591px;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 
 .dash-inner-content .error-msg img{
