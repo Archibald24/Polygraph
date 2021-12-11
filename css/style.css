@@ -419,7 +419,7 @@ header{
   align-items: center;
   justify-content: space-between;
   /*background: #000A1F;*/
-  background: inherit;
+  background: inherit
 }
 
 .header-inner .left .logo-block{
