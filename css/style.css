@@ -134,7 +134,7 @@ header{
 
 .flex-end{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -1835,6 +1835,12 @@ header{
   padding: 9px 8px;
 }
 
+.nav-menu ul li.active a:hover{
+  color: #030015;
+  background-color: #03ADEE;
+  padding: 9px 8px;
+}
+
 .nav-menu ul li a:hover,
 .reports-menu ul li:hover{
   background-color: #414959;
@@ -2010,24 +2016,31 @@ header{
 
 /**/
 ul.breadcrumb {
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 ul.breadcrumb li {
   display: inline;
   font-size: 14px;
+  line-height: 20px;
   color: #03ADEE;
 }
 
 ul.breadcrumb li+li:before {
   padding: 8px;
+  width: 20px;
+  height: 20px;
   color: #fff;
-  content: ">";
-}
+  content: " ";
+  background: url(../img/arrow-circle-right.svg) center center no-repeat;
+  margin-right: 4px;
+  }
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
-  color: #fff;
+  color: #B2B5BC;
+  font-size: 14px;
+  line-height: 20px;
   text-decoration: none;
 }
 /**/
@@ -2787,6 +2800,7 @@ a.add-site-btn:hover{
 .control-button{
   width: auto;
   display: inline-block;
+  text-align: center;
   padding: 8px 20px;
   cursor: pointer;
   color: #fff;
@@ -2857,7 +2871,7 @@ a.add-site-btn:hover{
   font-size: 18px;
   line-height: 24px;
   color: #fff;
-  margin: 16px;
+  margin-bottom: 24px;
 }
 
 .settings-block-large-content{
@@ -2876,6 +2890,7 @@ a.add-site-btn:hover{
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  padding-bottom: 4px ;
 }
 
 .settings-block .settings-block-inner .settings-block-form{
@@ -2941,6 +2956,7 @@ a.add-site-btn:hover{
   width: 33%;
   display: flex;
   align-items: center;
+  padding-top: 24px;
 }
 
 .settings-block .settings-block-inner .settings-block-form .settings-form-group .settings-form-link a{
@@ -2985,6 +3001,7 @@ a.add-site-btn:hover{
   font-size: 12px;
   line-height: 16px;
   color: #B2B5BC;
+  padding-top: 2px;
 }
 
 .default-paid-plan{
