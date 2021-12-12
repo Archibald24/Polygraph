@@ -1772,12 +1772,34 @@ header{
   align-items: center;
 }
 
+.add-website .add-web-disabled{
+  width: 100%;
+  padding: 7px 14px;
+  font-size: 12px;
+  border: 1px dashed #2B3446;
+  line-height: 16px;
+  color: #3B4250;
+  font-weight: 400;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+
 .add-website .add-web:hover{
   border: 1px dashed #575E6C;
   transition: all .3s ease-in-out;
 }
 
 .add-website .add-web img{
+  margin-right: 8px;
+}
+
+.add-website .add-web-disabled img{
   margin-right: 8px;
 }
 
@@ -2131,6 +2153,9 @@ ul.breadcrumb li a {
   background-color: #03ADEE;
   cursor: pointer;
   color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
   border-radius: 8px;
   transition: 0.3s ease-in-out;
 }
@@ -2228,13 +2253,17 @@ ul.breadcrumb li a {
   background-color: #161F32;
   border: 1px solid #2B3446;
   border-radius: 8px;
-  padding: 16px;
+  padding: 24px;
   margin-right: 32px;
   margin-bottom: 32px;
 }
 
 .dash-inner-content .chart-list .chart .chart-title{
   margin-bottom: 32px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .dash-inner-content .chart-list .chart .chart-body{
@@ -2253,7 +2282,7 @@ ul.breadcrumb li a {
 .dash-inner-content .chart-list .chart .chart-body .click-statistic,
 .dash-inner-content .chart-list .chart .chart-body .statistic-gradation{
   height: 100%;
-  padding: 4px 8px;
+  padding: 4px 0px;
   font-size: 12px;
   display: flex;
   justify-content: flex-end;
@@ -2281,7 +2310,7 @@ ul.breadcrumb li a {
   text-align: center;
   position: relative;
   top: -15px;
-  left: 5px;
+  left: 0px;
   font-size: 5px;
 }
 
@@ -2313,7 +2342,7 @@ ul.breadcrumb li a {
 }
 
 .dash-inner-content .card-list .card ul{
-  padding: 0 0 0 20px;
+  padding: 0 0 0 0px;
 }
 
 .dash-inner-content .card-list .card ul li{
@@ -2323,7 +2352,7 @@ ul.breadcrumb li a {
   padding-bottom: 8px;
   text-transform: uppercase;
   color: #fff;
-  list-style-type: disc;
+  list-style-type: none;
 }
 
 .dash-inner-content .card-list .card ul li:last-child{
