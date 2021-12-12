@@ -699,6 +699,10 @@ header{
 
 .modal-text{
   color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
   margin: 24px 0;
 }
@@ -1838,7 +1842,7 @@ header{
 }
 
 .dash-content{
-  width: calc(100% - 233px);
+  width: 100%;
   padding: 24px 32px;
 }
 
@@ -3361,7 +3365,7 @@ a.add-site-btn:hover{
   width: 49%;
 }
 
-.form-group .management-button,
+
 .form-group .back,
 .settings-form-group .back{
   background-color: inherit;
@@ -3378,18 +3382,32 @@ a.add-site-btn:hover{
   transition: all .3s ease-in-out;
 }
 
+.form-group .management-button{
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000A1F;
+  font-weight: 400;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
 .form-group .back img,
 .btns-block .back img{
   height: 9px;
 }
 
-.form-group .management-button:hover{
+/*.form-group .management-button:hover{
   background-color: #fff;
   border: 1px solid #fff;
   color: #000A1F;
   cursor: pointer;
   transition: all .3s ease-in-out;
-}
+}*/
 
 .form-group .management-button img,
 .form-group .back img{
