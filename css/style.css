@@ -205,6 +205,14 @@ header{
   padding: 96px 0;
 }
 
+.padding-top-bottom-112{
+  padding: 112px 0;
+}
+
+.padding-bottom-96{
+  padding-bottom: 96px;
+}
+
 .margin-both-8{
   margin: 0 8px;
 }
@@ -410,7 +418,7 @@ header{
   height: 100%;
   max-width: 1150px;
   margin: 0 auto;
-  padding: 0 15px;
+  /*padding: 0 15px;*/
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -714,7 +722,7 @@ header{
   height: 100%;
   max-width: 1182px;
   margin: 0 auto;
-  padding: 96px 15px;
+  /*padding: 96px 15px;*/
 }
 
 .blog-inner .ttl{
@@ -1606,6 +1614,7 @@ header{
 .header-full{
   max-width: 100%;
   box-shadow: inset 0px -1px 0px #161F32;
+  padding: 0 15px;
 }
 
 .dashboard{
