@@ -76,6 +76,16 @@ function openLoginMenu() {
 
 }
 
+function toggleDropdown() {
+  $('.dropdown').on('click', function(){
+    $('.dropdown-active + ul').slideToggle()
+    let content = $('.dropdown-active + ul li.active a').text()
+    console.log(content)
+    $('.dropdown-active').html(content)
+  })
+}
+toggleDropdown()
+
 function calcMainContentMargin() {
   const navigationBlock = document.getElementById("dash-navigation");
   const contentBlock = document.getElementsByClassName("dash-content");

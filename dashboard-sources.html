@@ -129,10 +129,25 @@
     </div>
 
     <div class="dash-inner-content">
+      <div class="mob flex-center white-text mobile-filter">
+        <!--      TODO: Need to add dropdown menu!-->
 
-      <div class="overflow-x-auto" style="margin-top: 24px;">
+        <div class="period-selection dropdown">
+          <span class="dropdown-active">This month</span>
+          <ul style="display: none;">
+            <li class="active"><a>This month</a></li>
+            <li><a>October</a></li>
+            <li><a>September</a></li>
+            <li><a>August</a></li>
+            <li><a>July</a></li>
+            <li><a>June</a></li>
+            <li><a>Past 6 months</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="overflow-x-auto desktop-filter" style="margin-top: 24px;">
 
-        <div class="period-selection m-width-650">
+        <div class="period-selection m-width-650 ">
           <ul>
             <li class="active">This month</li>
             <li><a>October</a></li>
@@ -158,7 +173,7 @@
             <div class="click-source">
               Google
             </div>
-            <div class="click-statistic" style="background-color:#9368FF; width: 105px;">
+            <div class="click-statistic" style="background-color:#9368FF; width: calc((100% - 90px) * 0.47 );">
               426
             </div>
           </div>
@@ -167,7 +182,7 @@
             <div class="click-source">
               Bing Ads
             </div>
-            <div class="click-statistic" style="background-color:#1877F2; width: 210px;">
+            <div class="click-statistic" style="background-color:#1877F2; width: calc((100% - 90px) * 0.95 );">
               933
             </div>
           </div>
@@ -176,7 +191,7 @@
             <div class="click-source">
               Pop Ads
             </div>
-            <div class="click-statistic" style="background-color:#1E9FA6; width: 30px;">
+            <div class="click-statistic" style="background-color:#1E9FA6; width: calc((100% - 90px) * 0.05 );">
               22
             </div>
           </div>
@@ -210,7 +225,7 @@
             <div class="click-source">
               Google
             </div>
-            <div class="click-statistic" style="background-color:#9368FF; width: 110px;">
+            <div class="click-statistic" style="background-color:#9368FF; width: calc((100% - 90px) * 0.22 );">
               22%
             </div>
           </div>
@@ -219,7 +234,7 @@
             <div class="click-source">
               Bing Ads
             </div>
-            <div class="click-statistic" style="background-color:#1877F2; width: 255px;">
+            <div class="click-statistic" style="background-color:#1877F2; width: calc((100% - 90px) * 0.57 );">
               57%
             </div>
           </div>
@@ -228,7 +243,7 @@
             <div class="click-source">
               Pop Ads
             </div>
-            <div class="click-statistic" style="background-color:#1E9FA6; width: 28px;">
+            <div class="click-statistic" style="background-color:#1E9FA6; width: calc((100% - 90px) * 0.05 );">
               5%
             </div>
           </div>

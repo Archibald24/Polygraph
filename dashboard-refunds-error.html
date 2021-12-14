@@ -128,10 +128,50 @@
     </div>
 
     <div class="dash-inner-content">
+      <div class="mob flex-center white-text mobile-filter">
+        <!--      TODO: Need to add dropdown menu!-->
 
-      <div class="overflow-x-auto">
+        <div class="flex-center" style="margin-bottom: 8px;">
+          <div>Campaigns:</div>
+          <div class="filter-dropdown-menu">
+            <a href="#">
+              <span>All</span>
+              <img src="./img/chevron_left.svg" class="chevron-down" alt="icon">
+            </a>
+          </div>
+        </div>
 
-        <div class="desc flex-center white-text m-width-1070">
+        <div class="flex-center">
+          <div>Sources:</div>
+          <div class="filter-dropdown-menu">
+            <a href="#">
+              <span>All</span>
+              <img src="./img/chevron_left.svg" class="chevron-down" alt="icon">
+            </a>
+          </div>
+        </div>
+
+        <div class="period-selection dropdown">
+          <span class="dropdown-active">This month</span>
+          <ul style="display: none;">
+            <li class="active"><a>This month</a></li>
+            <li><a>October</a></li>
+            <li><a>September</a></li>
+            <li><a>August</a></li>
+            <li><a>July</a></li>
+            <li><a>June</a></li>
+            <li><a>Past 6 months</a></li>
+          </ul>
+        </div>
+
+        <a href="#" class="download-csv-btn">
+          <img src="./img/dashboard/receive-square.svg" alt="">
+          <div class="margin-left-8">Download CSV</div>
+        </a>
+      </div>
+      <div class="overflow-x-auto ">
+
+        <div class="desc flex-center white-text m-width-1070 desktop-filter">
           <!--      TODO: Need to add dropdown menu!-->
 
           <div class="flex-center">
