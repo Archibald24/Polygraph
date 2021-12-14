@@ -586,7 +586,7 @@
     padding: 5px;
   }
   .web-table .heading{
-    display: none;
+    /* display: none; */
   }
   .expires-text {
     margin-left: auto;
