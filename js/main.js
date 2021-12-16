@@ -20,18 +20,18 @@ $( document ).ready(function() {
     $(this).removeClass('visible');
   });
   
-  $('.polygraph-help-single-text:first-child').on('click', function(){
-    $('.polygraph-help-media-content img').attr("src", "img/get1.svg");
-  });
-  $('.polygraph-help-single-text:nth-child(2)').on('click', function(){
-    $('.polygraph-help-media-content img').attr("src", "img/get2.svg");
-  });
- $('.polygraph-help-single-text:nth-child(3)').on('click', function(){
-    $('.polygraph-help-media-content img').attr("src", "img/get3.svg");
-  });
-   $('.polygraph-help-single-text:nth-child(4)').on('click', function(){
-    $('.polygraph-help-media-content img').attr("src", "img/get4.svg");
-  });
+//   $('.polygraph-help-single-text:first-child').on('click', function(){
+//     $('.polygraph-help-media-content img').attr("src", "img/get1.svg");
+//   });
+//   $('.polygraph-help-single-text:nth-child(2)').on('click', function(){
+//     $('.polygraph-help-media-content img').attr("src", "img/get2.svg");
+//   });
+//  $('.polygraph-help-single-text:nth-child(3)').on('click', function(){
+//     $('.polygraph-help-media-content img').attr("src", "img/get3.svg");
+//   });
+//    $('.polygraph-help-single-text:nth-child(4)').on('click', function(){
+//     $('.polygraph-help-media-content img').attr("src", "img/get4.svg");
+//   });
   closeContentBlock();
   openLoginMenu();
   calcMainContentMargin();
@@ -129,3 +129,4 @@ function periodSelection() {
 
   }
 }
+

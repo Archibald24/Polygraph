@@ -13,11 +13,19 @@
   .description-column{
     width: 40%;
   }
-  .image-column{
-    width: 60%;
-  }
+
   .header-inner {
     padding: 15px;
+  }
+  .blog-inner {
+    padding: 0 15px;
+  }
+  .subscription-plans-block {
+    flex-direction: column;
+  }
+  .subscription-plan-block {
+    width: 100%;
+    margin-bottom: 24px;
   }
 }
 
@@ -29,6 +37,7 @@
     height: auto;
     min-height: 200px;
   }
+ 
 }
 
 @media (max-width: 991px){
@@ -108,16 +117,24 @@
     width: 100%;
   }
   .image-column{
-    height: 575px;
-    height: auto;
-    width: 100%;
+    
   }
   .questions-block{
     flex-direction: column;
     align-items: center;
   }
   .polygraph-help-content{
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .polygraph-help-text-content {
+    margin-top: 48px;
+  }
+
+  .chess-block__media {
+    padding: 24px;
+  }
+  .image-column {
+    padding: 16px;
   }
 }
 
@@ -463,7 +480,44 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  
+  .chess-block__item .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chess-block__item {
+    height: auto;
+    max-height: none;
+    padding: 48px 0;
+  }
+  .chess-block__media {
+    width: calc(100% + 30px);
+    position: relative;
+    margin-top: 24px;
+    top: 0;
+    height: 400px;
+  }
+  .padding-top-bottom-112 {
+    padding: 48px 0;
+  }
+  /* .chess-block__item-left .chess-block__media{
+    left: -15px;
+  }
+  .chess-block__item-right .chess-block__media{
+    right: -15px;
+  } */
+  .chess-block-container {
+    padding-top: 88px !important;
+    padding-bottom:  0 !important;
+  }
+  .polygraph-help-block {
+    padding:  0 !important;
+  }
+  .polygraph-help-content {
+    padding: 0;
+  }
+  .polygraph-help-media-content {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 575px){
@@ -472,6 +526,9 @@
   .questions-form-block form{
     width: 100%;
     max-width: 100%;
+  }
+  .chess-block__media {
+    height: 360px;
   }
 }
 
@@ -545,6 +602,7 @@
   .polygraph-help-media-content{
     height: auto;
     max-height: 336px;
+
   }
   .main-title-description{
     margin-bottom: 24px;

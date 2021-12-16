@@ -6,7 +6,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-html {
+html, body {
   overflow-x: hidden;
 }
 body{
@@ -756,6 +756,93 @@ header{
   line-height: 76px;
   font-weight: 900;
 }
+.chess-block-container {
+  color: #fff;
+  position: relative;
+}
+.chess-block-container .wrapper {
+  max-width: 1182px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.chess-block__item {
+  height: calc(100vh);
+  max-height: 800px;
+  position: relative;
+  padding: 88px 0;
+}
+.chess-block__item:nth-child(2n) {
+  background-color: #071229;
+}
+.chess-block__item .wrapper{ 
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+}
+.chess-block__item-left .wrapper{
+  justify-content: flex-end;
+}
+.chess-block__text {
+  max-width: 284px;
+  font-weight: 800;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+.chess-block__text-number {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  color: #2B3446;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.chess-block__media {
+  position: absolute;
+  width: 59%;
+  height: calc(100vh - 88px * 2);
+  max-height: calc(800px - 88px * 2);
+  top: 88px;
+  padding: 60px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #009DE6 0%, #00398F 100%);
+}
+
+.chess-block__item-right .chess-block__media {
+  right: 0;
+  border-radius: 20px 0px 0px 20px;
+  padding-right: 0;
+}
+.chess-block__item-left .chess-block__media {
+  left: 0;
+  border-radius: 0px 20px 20px 0px;
+  padding-left: 0;
+}
+.image-column{
+  background: #00173C;
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.75);
+  height:100%;
+  width: 100%;
+  display:block;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  opacity: 1;
+  padding: 35px;
+  box-sizing: border-box;
+}
+.chess-block__item-right .image-column {
+border-radius: 16px 0px 0px 16px;
+}
+.chess-block__item-left .image-column {
+border-radius: 16px 0px 0px 16px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 
 .click-fraud-block{
   width: 100%;
@@ -782,9 +869,10 @@ header{
 }
 
 .main-sub-title{
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 900;
   line-height: 64px;
+  color: #fff;
 }
 
 .main-tab-title{
@@ -799,6 +887,7 @@ header{
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .main-title-description{
@@ -905,16 +994,7 @@ header{
   align-items: center;
 }
 
-.image-column{
-  background-color:#000a1f;
-  height:100%;
-  width: 50%;
-  display:block;
-  overflow: hidden;
-  transform: translate3d(0,0,0);
-  text-align: center;
-  opacity: 1;
-}
+
 
 .content-column .slider-content{
   display: none;
@@ -926,18 +1006,31 @@ header{
 .content-column .show-content{
   display: flex;
 }
+.polygraph-help-content {
+
+}
 
 .polygraph-help-text-content{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: static;
+  transform: translate3d(0,0,0) !important;
 }
-
+.polygraph-mouseWheel {
+  overflow: hidden;
+}
 .polygraph-help-media-content{
 /*  background: #00173C;*/
-  max-width: 448px;
-  height: 336px;
+  max-width: 719px;
+  width: 100%;
+  height: 440px;
+  margin-left: 30px;
 }
+/* .polygraph-mouseWheel {
+  position: absolute;
+  right: 0;
+} */
 
 .polygraph-help-media-content img{
   width: 100%;
@@ -946,13 +1039,23 @@ header{
 .polygraph-help-text-content, .polygraph-help-media-content{
   margin: 8px;
 }
+.polygraph-help-content {
+  padding: 88px 0;
+}
 
 .polygraph-help-single-text{
   position: relative;
   max-width: 500px;
+  background: transparent !important;
+  width: 100%;
   padding: 16px 8px 16px 32px;
   cursor: pointer;
+  height: auto;
+  display: block;
+  opacity: 1;
+  border-radius: 12px;
 }
+
 
 .polygraph-help-single-text .desc{
   display: none;
@@ -965,28 +1068,39 @@ header{
   font-size: 20px;
   font-weight: 800;
   line-height: 28px;
-  color: #333D51;
+  color: #333D51
 }
 
-.polygraph-help-single-text.active{
+.polygraph-help-single-text.swiper-pagination-bullet-active{
   color: #fff;
-  background: #03ADEE33;
-  border: 1px solid #03ADEE;
-  border-radius: 12px;
+  background: #03ADEE33 !important;
+  border: 1px solid #03ADEE !important;
   transition: all .3s ease-in-out;
 }
 
-.polygraph-help-single-text.active .title{
+.polygraph-help-single-text.swiper-pagination-bullet-active .title{
   color: #03ADEE;
   transition: all .3s ease-in-out;
+  position: relative;
+}
+.polygraph-help-single-text.swiper-pagination-bullet-active .title::before{
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #03ADEE;
+  border-bottom: 2px solid #03ADEE;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: -19px;
+  top: 10px;
 }
 
-.polygraph-help-single-text.active .desc{
+.polygraph-help-single-text.swiper-pagination-bullet-active .desc{
   display: block;
   transition: all .3s ease-in-out;
 }
 
-.polygraph-help-single-text.active .block-shadow{
+.polygraph-help-single-text.swiper-pagination-bullet-active .block-shadow{
   position: absolute;
   top: 45px;
   left: -285px;
