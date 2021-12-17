@@ -769,6 +769,7 @@ header{
 .chess-block__item {
   height: calc(100vh);
   max-height: 800px;
+  min-height: 500px;
   position: relative;
   padding: 88px 0;
 }
@@ -805,6 +806,7 @@ header{
   width: 59%;
   height: calc(100vh - 88px * 2);
   max-height: calc(800px - 88px * 2);
+  min-height: calc(500px  - 88px * 2);
   top: 88px;
   padding: 60px;
   box-sizing: border-box;
@@ -832,15 +834,27 @@ header{
   box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.75);
   text-align: center;
   opacity: 1;
-  padding: 35px;
+  padding: 0 35px;
   box-sizing: border-box;
+  position: relative;
+}
+.image-column svg {
+  /* position: absolute;
+  width: 130% !important;
+  height: 130% !important;
+  left: 50%;
+  top: 50%; */
+  position: relative;
+  top: -10%;
+  left: -10%;
+  width: 120% !important;
+  height: 120% !important;
 }
 .chess-block__item-right .image-column {
 border-radius: 16px 0px 0px 16px;
 }
 .chess-block__item-left .image-column {
-border-radius: 16px 0px 0px 16px;
-transform: matrix(-1, 0, 0, 1, 0, 0);
+border-radius: 0 16px 16px 0;
 }
 
 
