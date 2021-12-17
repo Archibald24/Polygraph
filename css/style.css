@@ -1042,6 +1042,9 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
 .polygraph-help-content {
   padding: 88px 0;
 }
+.polygraph-help-content.event-hidden {
+  pointer-events: none;
+}
 
 .polygraph-help-single-text{
   position: relative;

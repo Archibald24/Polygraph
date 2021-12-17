@@ -559,8 +559,9 @@
       spaceBetween: 10,
       allowTouchMove: false,
       mousewheel: {
-        // releaseOnEdges: true,
-      eventsTarget: '.polygraph-help-content'
+        releaseOnEdges: true,
+        forceToAxis: true,
+        eventsTarget: '.polygraph-help-content'
       },
       pagination: {
           el: '.polygraph-mouseWheel-pagination',
@@ -570,7 +571,34 @@
             },
           },
       });
+      // var scrollPos = 0;
+      // $(window).scroll(function(){
+      //   var st = $(this).scrollTop();
+      //   if (st > scrollPos){
+      //     console.log('bot')
+      //     if($('.polygraph-help-single-text:eq(-1)').hasClass('swiper-pagination-bullet-active')){
+      //       // polygraph_mouseWheel.mousewheel.disable()
+      //       $('.polygraph-help-content').addClass('event-hidden')
+      //     } else {
+      //       // polygraph_mouseWheel.mousewheel.enable()
+      //       $('.polygraph-help-content').removeClass('event-hidden')
+      //     }
+      //   } else {
+      //     console.log('top')
+      //     if($('.polygraph-help-single-text:eq(0)').hasClass('swiper-pagination-bullet-active')){
+      //       // polygraph_mouseWheel.mousewheel.disable()
+      //       $('.polygraph-help-content').addClass('event-hidden')
+      //     } else {
+      //       // polygraph_mouseWheel.mousewheel.enable()
+      //       $('.polygraph-help-content').removeClass('event-hidden')
+      //     }
+          
+      //   }
+      //   scrollPos = st;
+      // });
+      
   }
+
 
   function movePolygraphHelpSlides() {
     let polygraphHelpSliders = document.getElementsByClassName("polygraph-help-single-text");
