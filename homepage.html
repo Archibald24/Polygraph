@@ -555,7 +555,7 @@
 
   function moveSliderMouseWheel () {
     let arr = document.querySelectorAll('.polygraph-help-single-text')
-    var polygraph_mouseWheel = new Swiper(".polygraph-mouseWheel", {
+    let polygraph_mouseWheel = new Swiper(".polygraph-mouseWheel", {
       direction: "vertical",
       slidesPerView: 1,
       spaceBetween: 10,
@@ -566,13 +566,24 @@
         eventsTarget: '#roll_sliders_content'
       },
       pagination: {
-          el: '.polygraph-mouseWheel-pagination',
-          clickable: true,
-            renderBullet: function (index, className) {
-                return '<div class="polygraph-help-single-text mb-12 ' + className + '">' + (arr[index].innerHTML) + '</div>';
-            },
-          },
-      });
+        el: '.polygraph-mouseWheel-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<div class="polygraph-help-single-text mb-12 ' + className + '">' + (arr[index].innerHTML) + '</div>';
+        },
+      },
+    });
+    polygraph_mouseWheel.mousewheel.disable();
+
+    $(document).on('scroll', function() {
+      let top = $(window).scrollTop() - $('#roll_sliders_content').offset().top;
+
+      if (0 < top && top < 250) {
+        polygraph_mouseWheel.mousewheel.enable();
+      } else {
+        polygraph_mouseWheel.mousewheel.disable();
+      }
+    });
       // var scrollPos = 0;
       // $(window).scroll(function(){
       //   var st = $(this).scrollTop();
