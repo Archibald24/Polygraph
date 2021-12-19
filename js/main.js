@@ -36,6 +36,8 @@ $( document ).ready(function() {
   openLoginMenu();
   calcMainContentMargin();
   periodSelection();
+  calculateContentMarginTop();
+  addEventListenerForMenu();
 });
 
 function closeContentBlock() {
@@ -128,5 +130,24 @@ function periodSelection() {
     }
 
   }
+}
+
+function calculateContentMarginTop() {
+  const headerHeight = $('header').height();
+  $('.blog').css('margin-top', headerHeight + 'px');
+  $('.dashboard').css('margin-top', headerHeight + 'px');
+  $('.single').css('margin-top', headerHeight + 'px');
+}
+
+function addEventListenerForMenu() {
+  $('.main-pages-right').children('nav').children('ul').children('li').each(function () {
+    $(this).on('click', function () {
+      if ($('#homepage_hamburger_menu').css('display') === 'block') {
+        $('.simple-hamburger').toggleClass('is-active');
+        $('.header-inner .right').toggleClass('open');
+        $('body').toggleClass('overflow');
+      }
+    });
+  });
 }
 
