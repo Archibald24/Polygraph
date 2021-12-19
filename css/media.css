@@ -585,7 +585,8 @@
     width: auto;
     height: 100%;
   }
-  .blog-inner{
+  .blog-inner,
+  .polygraph-help-block{
     padding: 0 15px;
   }
   .main-title-block{
