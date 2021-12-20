@@ -839,11 +839,6 @@ header{
   position: relative;
 }
 .image-column svg {
-  /* position: absolute;
-  width: 130% !important;
-  height: 130% !important;
-  left: 50%;
-  top: 50%; */
   position: relative;
   top: -10%;
   left: -10%;
