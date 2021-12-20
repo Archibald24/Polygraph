@@ -25,7 +25,7 @@
     <div class="right main-pages-right">
       <nav>
         <ul>
-          <li><a href="#click-fraud-details">What is click fraud</a></li>
+          <li><a href="#chess-block-container">What is click fraud</a></li>
           <li><a href="#polygraph-can-help">How Polygraph can help</a></li>
           <li><a href="#pricing">Pricing</a></li>
         </ul>
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class="hamburger simple-hamburger hamburger--3dy">
+    <div id="homepage_hamburger_menu" class="hamburger simple-hamburger hamburger--3dy">
       <div class="hamburger-box">
         <div class="hamburger-inner"></div>
       </div>
@@ -55,7 +55,7 @@
      <div class="main-title-block">
 
       <div class="main-title mb-32">
-        <span class="underline-blue">20%</span> of your ad budget is <br>
+        <span class="underline-blue">20%</span> of your ad budget is
         being wasted on <span class="blue-text font-style-italic">click fraud*</span>.
       </div>
 
@@ -74,7 +74,7 @@
     </video>
   </div>
 
-  <div id="chess-block-container" class="chess-block-container padding-top-bottom-112">
+  <div id="chess-block-container" class="chess-block-container padding-top-96">
     
       <div class="main-sub-title center-text">
         <span class="small-text blue-text">Introduction</span><br>What is click fraud
@@ -139,11 +139,9 @@
   
   </div>
 
-  <div class="blog-inner">
-    
+  <div id="roll_sliders_content">
 
-
-    <div id="polygraph-can-help" class="polygraph-help-block padding-top-bottom-112">
+    <div id="polygraph-can-help" class="polygraph-help-block padding-top-96">
       <div class="main-sub-title center-text mb-8">
         <span class="small-text blue-text">GET STARTED</span><br>How polygraph can help
       </div>
@@ -178,7 +176,7 @@
             <div class="block-shadow"></div>
             <div class="title">Block bots</div>
             <div class="desc">
-              If you use Google Ads, our system will automatically block bots 
+              If you use Google Ads, our system will automatically block bots
               from being able to see your ads.
             </div>
           </div>
@@ -193,7 +191,7 @@
           </div>
 
         </div>
-        <div class="polygraph-mouseWheel">
+        <div class="polygraph-mouseWheel polygraph-help-images">
           <div class="polygraph-help-media-content swiper-wrapper">
             <img class="swiper-slide" src="img/test_img_helpp.png" alt="image">
             <img class="swiper-slide" src="img/test_img_help2.png" alt="image">
@@ -201,12 +199,16 @@
             <img class="swiper-slide" src="img/test_img_help.png" alt="image">
           </div>
         </div>
-     
+
 
       </div>
     </div>
 
-    <div id="pricing" class="pricing-block padding-top-bottom-112">
+  </div>
+
+  <div class="blog-inner">
+
+    <div id="pricing" class="pricing-block padding-top-bottom-96">
       <div class="main-sub-title center-text mb-32">
         <span class="small-text blue-text">TRY US NOW</span><br>Completely <span class="blue-text">RISK FEE</span>
       </div>
@@ -553,7 +555,7 @@
 
   function moveSliderMouseWheel () {
     let arr = document.querySelectorAll('.polygraph-help-single-text')
-    var polygraph_mouseWheel = new Swiper(".polygraph-mouseWheel", {
+    let polygraph_mouseWheel = new Swiper(".polygraph-mouseWheel", {
       direction: "vertical",
       slidesPerView: 1,
       spaceBetween: 10,
@@ -561,16 +563,27 @@
       mousewheel: {
         releaseOnEdges: true,
         forceToAxis: true,
-        eventsTarget: '.polygraph-help-content'
+        eventsTarget: '#roll_sliders_content'
       },
       pagination: {
-          el: '.polygraph-mouseWheel-pagination',
-          clickable: true,
-            renderBullet: function (index, className) {
-                return '<div class="polygraph-help-single-text mb-12 ' + className + '">' + (arr[index].innerHTML) + '</div>';
-            },
-          },
-      });
+        el: '.polygraph-mouseWheel-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<div class="polygraph-help-single-text mb-12 ' + className + '">' + (arr[index].innerHTML) + '</div>';
+        },
+      },
+    });
+    polygraph_mouseWheel.mousewheel.disable();
+
+    $(document).on('scroll', function() {
+      let top = $(window).scrollTop() - $('#roll_sliders_content').offset().top;
+
+      if (0 < top && top < 250) {
+        polygraph_mouseWheel.mousewheel.enable();
+      } else {
+        polygraph_mouseWheel.mousewheel.disable();
+      }
+    });
       // var scrollPos = 0;
       // $(window).scroll(function(){
       //   var st = $(this).scrollTop();

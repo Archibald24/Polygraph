@@ -509,14 +509,17 @@
     padding-top: 88px !important;
     padding-bottom:  0 !important;
   }
-  .polygraph-help-block {
-    padding:  0 !important;
-  }
+  /*.polygraph-help-block {*/
+  /*  padding:  0 !important;*/
+  /*}*/
   .polygraph-help-content {
     padding: 0;
   }
   .polygraph-help-media-content {
     margin-left: 0;
+  }
+  .polygraph-help-images {
+    height: 1px;
   }
 }
 
@@ -586,11 +589,17 @@
     height: 100%;
   }
   .blog-inner,
+  .polygraph-help-block{
+    padding: 0 15px;
+  }
   .main-title-block{
     padding: 48px 15px;
   }
   .padding-top-bottom-96{
     padding: 48px 0;
+  }
+  .padding-top-96{
+    padding-top: 48px;
   }
   .blog .video-block{
     padding-bottom: 356px;
@@ -601,7 +610,7 @@
   }
   .polygraph-help-media-content{
     height: auto;
-    max-height: 336px;
+    max-height: 201px;
 
   }
   .main-title-description{
