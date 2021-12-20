@@ -138,6 +138,7 @@ function calculateContentMarginTop() {
   $('.dashboard').css('margin-top', headerHeight + 'px');
   $('.single').css('margin-top', headerHeight + 'px');
 }
+window.onresize = calculateContentMarginTop;
 
 function addEventListenerForMenu() {
   $('.main-pages-right').children('nav').children('ul').children('li').each(function () {

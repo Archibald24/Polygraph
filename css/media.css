@@ -140,6 +140,11 @@
 
 
 @media (max-width: 768px){
+  footer {
+    position: relative;
+    z-index: 2;
+    background-color: #000A1F;
+  }
   .blog .video-block {
     padding-bottom: 424px;
   }
@@ -361,11 +366,13 @@
   }
   .sign-in .img-block, .sign-up .img-block, .forgot-password-wrap .img-block, .reset-wrap .img-block{
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     position: absolute;
     z-index: -1;
     left: 0;
+    height: 120%;
     top: 0;
+    bottom: 0;
   }
   .sign-in .form-block, .sign-up .form-block, .forgot-password .form-block, .reset .form-block{
     width: 100%;
