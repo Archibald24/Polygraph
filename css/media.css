@@ -391,6 +391,7 @@
     display: none;
     z-index: 99;
     min-height: calc(100vh - 50px);
+    padding-bottom: 100px;
   }
   .dash-nav.open{
     display: -webkit-flex;
@@ -520,6 +521,12 @@
   }
   .polygraph-help-images {
     height: 1px;
+  }
+  .sign-in-wrap header,
+  .sign-up-wrap header,
+  .forgot-password-wrap header,
+  .reset-wrap header{
+    position: static;
   }
 }
 
