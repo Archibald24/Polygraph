@@ -20,6 +20,7 @@ body.overflow{
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
 }
 
 /*
@@ -102,19 +103,28 @@ header{
   overflow-x: auto;
   padding-bottom: 8px;
 }
-
+/* .website-list::-webkit-scrollbar,
+.disabled-list::-webkit-scrollbar,
+.pending-list::-webkit-scrollbar, */
+.dash-nav::-webkit-scrollbar,
 .overflow-x-auto::-webkit-scrollbar {
   width: 10px;
   height: 6px;
   border-radius: 10px;
   background-color: #f9f9fd;
 }
-
+/* .website-list::-webkit-scrollbar-thumb,
+.disabled-list::-webkit-scrollbar-thumb,
+.pending-list::-webkit-scrollbar-thumb, */
+.dash-nav::-webkit-scrollbar-thumb,
 .overflow-x-auto::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #03ADEE;
 }
-
+/* .website-list::-webkit-scrollbar-track,
+.disabled-list::-webkit-scrollbar-track,
+.pending-list::-webkit-scrollbar-track, */
+.dash-nav::-webkit-scrollbar-track,
 .overflow-x-auto::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
   border-radius: 10px;
@@ -427,7 +437,7 @@ header{
   height: 100%;
   max-width: 1150px;
   margin: 0 auto;
-  /*padding: 0 15px;*/
+  padding: 0 15px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -1803,6 +1813,8 @@ border-radius: 0 16px 16px 0;
   align-items: stretch;
   width: 160px;
   padding: 20px 0;
+  max-height: 100vh;
+  overflow-y: auto;
   background-color: #161F32;
 }
 
@@ -1870,10 +1882,14 @@ border-radius: 0 16px 16px 0;
 
 .website-list{
   margin-top: 12px;
+  /* max-height: 120px;
+  overflow-y: auto; */
 }
 .pending-list,
 .disabled-list{
   margin: 0px 0px;
+  /* max-height: 220px;
+  overflow-y: auto; */
 }
 
 .website-list li,
@@ -2389,6 +2405,7 @@ ul.breadcrumb li a {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  align-items: flex-start;
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -2411,7 +2428,7 @@ ul.breadcrumb li a {
 /**/
 .dash-inner-content .card-list .card{
   width: 372px;
-  height: 188px;
+  height: auto;
 }
 
 .dash-inner-content .chart-list .chart{
@@ -2625,7 +2642,7 @@ ul.breadcrumb li a {
 
 .btns-block{
   width: 100%;
-  max-width: 416px;
+  /* max-width: 416px; */
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -2672,7 +2689,7 @@ ul.breadcrumb li a {
 
 ul.instruction{
   width: 100%;
-  max-width: 416px;
+  /* max-width: 416px; */
   padding: 0 0 0 20px;
   font-family: 'Inter', sans-serif;
 }
@@ -3287,7 +3304,7 @@ a.add-site-btn:hover{
 .forgot-password .form-block,
 .reset .form-block{
   width: 60.65%;
-  height: 100vh;
+  /* height: 100vh; */
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
