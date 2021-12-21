@@ -140,6 +140,9 @@
 
 
 @media (max-width: 768px){
+  .body-background-image .blog {
+    margin-top: 70px;
+  }
   footer {
     position: relative;
     z-index: 2;

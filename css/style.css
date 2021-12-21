@@ -34,6 +34,9 @@ body.overflow{
   background-position-x: center;
 }
 */
+.body-background-image .blog {
+  margin-top: 80px;
+}
 
 .blog .video-block{
   position: relative;
