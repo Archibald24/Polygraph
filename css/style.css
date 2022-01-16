@@ -134,6 +134,10 @@ header{
   background-color: #f9f9fd;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .relative-block{
   position: relative;
 }
@@ -161,10 +165,6 @@ header{
   align-items: center;
 }
 
-.white-text{
-  color: #fff;
-}
-
 .blue-text{
   color: #03ADEE!important;
 }
@@ -181,6 +181,11 @@ header{
   color: #fff!important;
 }
 
+.painted-input{
+  background-color: #2B3446!important;
+  border-color: #414959!important;
+}
+
 .center-text{
   text-align: center;
 }
@@ -193,6 +198,10 @@ header{
 
 .font-style-italic{
   font-style: italic;
+}
+
+.padding-top-0{
+  padding-top: 0!important;
 }
 
 .padding-top-bottom-8{
@@ -249,6 +258,10 @@ header{
 
 .margin-right-16{
   margin-right: 16px;
+}
+
+.mb-0{
+  margin-bottom: 0!important;
 }
 
 .mb-8{
@@ -605,6 +618,11 @@ header{
   padding: 6px;
 }
 
+.chevron-down-background{
+  background: url("../img/chevron_down.svg") no-repeat 95% 55%;
+  background-size: 8px;
+}
+
 .header-inner .account-menu-popup{
   position: absolute;
   right: -7px;
@@ -703,8 +721,8 @@ header{
   width: 415px;
   max-width: 100%;
   height: auto;
-  max-height: 320px;
-  padding: 30px;
+  max-height: 400px;
+  padding: 24px;
   background: #161F32;
   border-radius: 12px;
   position: relative;
@@ -725,6 +743,24 @@ header{
   cursor: pointer;
   transition: .3s;
   outline: none;
+}
+
+.modal-title{
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
+}
+
+.modal-label{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.modal-input-text{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .modal-text{
@@ -2776,7 +2812,9 @@ p.p-help a{
 }
 
 .web-list-block .add-site-btn,
-.dash-content .download-csv-btn{
+.dash-content .download-csv-btn,
+.welcome-message .add-acc-btn,
+.add-button-blue{
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -2798,12 +2836,23 @@ p.p-help a{
   margin-bottom: 16px;
 }
 
-.refunds-table{
+.welcome-message .add-acc-btn,
+.add-button-blue{
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 10px 12px!important;
+}
+
+.refunds-table,
+.google-ads-acc-table,
+.google-ads-client-table{
   border: 1px solid #161F32;
   border-radius: 12px;
 }
 
-a.add-site-btn:hover{
+a.add-site-btn:hover,
+a.add-acc-btn:hover,
+a.add-button-blue:hover{
   background-color:#008BD0;
   transition: all .3s ease-in-out;
 }
@@ -2815,6 +2864,10 @@ a.add-site-btn:hover{
 
 .web-table .heading,
 .web-table .table-body,
+.google-ads-acc-table .heading,
+.google-ads-acc-table .table-body,
+.google-ads-client-table .heading,
+.google-ads-client-table .table-body,
 .refunds-table .heading,
 .refunds-table .table-body{
   width: 100%;
@@ -2832,11 +2885,15 @@ a.add-site-btn:hover{
   border-bottom: 1px solid #161F32;
 }
 
-.refunds-table .table-body{
+.refunds-table .table-body,
+.google-ads-client-table .table-body,
+.google-ads-acc-table .table-body{
   border-top: 1px solid #161F32;
 }
 
 .web-table .heading>div,
+.google-ads-acc-table .heading>div,
+.google-ads-client-table .heading>div,
 .refunds-table .heading>div{
   color: #03ADEE;
   font-size: 12px;
@@ -2863,12 +2920,29 @@ a.add-site-btn:hover{
   max-width: 568px;
 }
 
-.web-table .table-body .b-status span{
+.google-ads-acc-table .heading .label-five-columns,
+.google-ads-acc-table .table-body .b-five-columns,
+.google-ads-client-table .heading .label-five-columns,
+.google-ads-client-table .table-body .b-five-columns{
+  width: 20%;
+}
+
+.google-ads-acc-table .heading .label-five-columns-two,
+.google-ads-acc-table .table-body .b-five-columns-two,
+.google-ads-client-table .heading .label-five-columns-two,
+.google-ads-client-table .table-body .b-five-columns-two{
+  width: 40%;
+}
+
+.web-table .table-body .b-status span,
+.google-ads-client-table .table-body .b-five-columns span,
+.google-ads-client-table .table-body .b-five-columns-two span{
   padding: 6px 8px;
   border-radius: 4px;
 }
 
-.web-table .table-body .status-active span{
+.web-table .table-body .status-active span,
+.google-ads-client-table .table-body .status-active span{
   background-color: #03ADEE;
 }
 
@@ -2891,7 +2965,9 @@ a.add-site-btn:hover{
 }
 
 .web-table .table-body>div,
-.refunds-table .table-body>div{
+.refunds-table .table-body>div,
+.google-ads-acc-table .table-body>div,
+.google-ads-client-table .table-body>div{
   padding: 20px 16px;
   color: #fff;
   font-size: 14px;
@@ -3078,7 +3154,7 @@ a.add-site-btn:hover{
 
 .settings-block{
   border: 1px solid #2B3446;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: #161F32;
   width: 100%;
   max-width: 575px;
@@ -3100,6 +3176,13 @@ a.add-site-btn:hover{
   line-height: 24px;
   color: #fff;
   margin-bottom: 24px;
+}
+
+.settings-block .settings-block-inner .settings-block-sub-title{
+  font-size: 16px;
+  line-height: 24px;
+  color: #B2B5BC;
+  font-weight: 400;
 }
 
 .settings-block-large-content{
