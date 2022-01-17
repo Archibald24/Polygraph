@@ -139,21 +139,46 @@
             <div class="settings-form-group padding-bottom-8">
               <div class="settings-form-column margin-right-16">
                 <label for="select-account-name" class="modal-label">Select Account</label>
-                <div class="settings-block painted-input mb-16 cursor-pointer flex-center" id="select-account-name" style="padding: 12px;">
-                  <div class="settings-block-inner modal-input-text">
-                    John
+
+                <div
+                  class="settings-block painted-input mb-16 cursor-pointer flex-center"
+                  id="select-account-name"
+                  onclick="openDropdownMenu(this)"
+                  style="padding: 12px;">
+                  <div class="settings-block-inner modal-input-text value-from-dropdown">
+                    Steve Ryan
                   </div>
                   <img src="img/chevron_down.svg" alt="icon">
+                </div>
+
+                <div class="select-menu-popup hide-element values-for-input" id="select-account-name-dropdown">
+                  <ul>
+                    <li>Account 1</li>
+                    <li>Account 2</li>
+                  </ul>
                 </div>
               </div>
 
               <div class="settings-form-column">
                 <label for="select-client-name" class="modal-label">Select Client</label>
-                <div class="settings-block painted-input mb-16 cursor-pointer flex-center" id="select-client-name" style="padding: 12px;">
-                  <div class="settings-block-inner modal-input-text">
+
+                <div
+                  class="settings-block painted-input mb-16 cursor-pointer flex-center"
+                  id="select-client-name"
+                  onclick="openDropdownMenu(this)"
+                  style="padding: 12px;"
+                >
+                  <div class="settings-block-inner modal-input-text value-from-dropdown">
                     John
                   </div>
                   <img src="img/chevron_down.svg" alt="icon">
+                </div>
+
+                <div class="select-menu-popup hide-element values-for-input" id="select-client-name-dropdown">
+                  <ul>
+                    <li>Client 1</li>
+                    <li>Client 2</li>
+                  </ul>
                 </div>
               </div>
 

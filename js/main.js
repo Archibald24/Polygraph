@@ -38,6 +38,7 @@ $( document ).ready(function() {
   periodSelection();
   calculateContentMarginTop();
   addEventListenerForMenu();
+  setValueFromDropDown();
 });
 
 function closeContentBlock() {
@@ -64,18 +65,50 @@ function openLoginMenu() {
       toggleMenu();
     });
 
-    document.addEventListener("click", function(e){
-      const target = e.target;
-      const itsAccountMenuPopup = target === accountMenuPopup || accountMenuPopup.contains(target);
-      const itsAccountMenu = target === accountMenu;
-      const menuIsActive = !accountMenuPopup.classList.contains("hide-element");
-
-      if (!itsAccountMenuPopup && !itsAccountMenu && menuIsActive) {
-        toggleMenu();
-      }
-    });
+    hideDropDownByClick(accountMenu, accountMenuPopup);
   }
 
+}
+
+function openDropdownMenu(element) {
+  const elementMenu = document.getElementById(element.id + '-dropdown');
+
+  if (null !== elementMenu) {
+    const toggleMenu = function() {
+      elementMenu.classList.toggle("hide-element");
+    }
+    toggleMenu();
+    hideDropDownByClick(element, elementMenu);
+  }
+}
+
+function hideDropDownByClick(element, elementMenu) {
+  document.addEventListener("click", function(e){
+    const eTarget = e.target;
+    const itsElementMenu = eTarget === elementMenu || elementMenu.contains(eTarget);
+    const itsElement = eTarget === element || element.contains(eTarget);
+    const menuIsActive = !elementMenu.classList.contains("hide-element");
+
+    if (itsElementMenu && !itsElement && menuIsActive) {
+      elementMenu.classList.toggle("hide-element");
+    }
+  });
+}
+
+function setValueFromDropDown() {
+  const dropDownMenu = document.querySelectorAll('.values-for-input');
+
+  for (let i = 0; i < dropDownMenu.length; i++) {
+    const dropDownMenuInputId = dropDownMenu[i].getAttribute('id').replace('-dropdown', '');
+    const dropDownMenuInput = document.getElementById(dropDownMenuInputId);
+
+    dropDownMenu[i].onclick = function(event){
+      let target = event.target;
+      if (target.tagName === 'LI') {
+        dropDownMenuInput.querySelector('.value-from-dropdown').innerHTML = target.innerHTML;
+      }
+    };
+  }
 }
 
 function toggleDropdown() {

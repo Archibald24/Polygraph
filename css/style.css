@@ -443,7 +443,8 @@ header{
 }
 
 .payment-menu-popup ul li:hover,
-.account-menu-popup ul li:hover{
+.account-menu-popup ul li:hover,
+.select-menu-popup ul li:hover{
   background-color: #414959;
   transition: all .3s ease-in-out;
 }
@@ -627,7 +628,6 @@ header{
   position: absolute;
   right: -7px;
   min-width: 200px;
-  min-height: 90px;
   padding: 8px 0px;
   margin-top: 10px;
   border-radius: 8px;
@@ -639,21 +639,43 @@ header{
   content: '';
   position: absolute;
   left: 178px;
-  bottom: 90px;
+  top: -10px;
   border: 5px solid transparent;
   border-bottom: 5px solid #2B3446;
 }
 
-.header-inner .account-menu-popup ul li{
+.select-menu-popup{
+  position: absolute;
+  width: 247px;
+  min-width: 200px;
+  padding: 8px 0px;
+  border-radius: 8px;
+  background-color: #2B3446;
+  z-index: 9999;
+}
+
+.select-menu-popup::before{
+  content: '';
+  position: absolute;
+  right: 13px;
+  top: -10px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #2B3446;
+}
+
+.header-inner .account-menu-popup ul li,
+.select-menu-popup ul li{
   transition: all .3s ease-in-out;
 }
 
-.header-inner .account-menu-popup ul li a{
+.header-inner .account-menu-popup ul li a,
+.select-menu-popup ul li{
+  display: inline-block;
   width: 100%;
   color: #fff;
   font-size: 14px;
-  line-height: 36px;
   padding: 8px;
+  cursor: pointer;
 }
 
 .info-popup{
